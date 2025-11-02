@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tourism Management System</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<h1>Tourism Management System</h1>
+</header>
+
+
+<nav>
+<a href="#" onclick="openLogin()">Login</a>
+<a href="#packages">Tour Packages</a>
+<a href="#booking">Booking</a>
+<a href="#admin" onclick="openAdmin()">Admin</a>
+</nav>
+<div class="hero">Explore the World with Us</div>
+
+
+<section id="packages" class="packages"></section>
+
+
+<section id="booking" class="booking-form">
+<h2>Book Your Trip</h2>
+<form>
+<input type="text" placeholder="Full Name" required />
+<input type="email" placeholder="Email" required />
+<input type="number" placeholder="Number of Persons" required />
+<select required>
+<option value="">Select Package</option>
+<option>Goa Trip</option>
+<option>Shimla Manali</option>
+<option>Kashmir Tour</option>
+</select>
+<button type="submit">Submit</button>
+</form>
+</section>
+<footer>
+<p>Contact Us: sanjaymore@gmail.com | +91 8605762961</p>
+</footer>
+
+
+<!-- User Login -->
+<div id="loginBox" class="popup-box">
+<span class="closeBtn" onclick="closeLogin()">✖</span>
+<h3>User Login</h3>
+<input type="text" placeholder="Username" />
+<input type="password" placeholder="Password" />
+<button onclick="loginUser()">Login</button>
+</div>
+<!-- Admin Login -->
+<div id="adminBox" class="popup-box">
+<span class="closeBtn" onclick="closeAdmin()">✖</span>
+<h3>Admin Login</h3>
+<input type="text" placeholder="Admin ID" />
+<input type="password" placeholder="Password" />
+<button onclick="adminLogin()">Login</button>
+</div>
+
+
+<!-- Admin Panel -->
+<section id="adminPanel" class="admin-panel" style="display:none;">
+<h2>Admin Dashboard</h2>
+<p>Total Bookings: <span id="bookingCount">0</span></p>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
